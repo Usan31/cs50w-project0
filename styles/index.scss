@@ -1,0 +1,43 @@
+body {
+  @media screen and (min-width: 992px) {
+    nav.horizontal {
+      display:none;            
+    }
+
+    nav.vertical {
+      top: 0;
+      flex-direction: column;
+      position: sticky;
+      height: 100vh;
+
+      div#tittle {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      div.container-fluid {
+        flex-direction: column;
+
+        div.collapse {
+          ul.navbar-nav {
+            flex-direction: column;
+
+            > li {
+              background-color: #437047;
+
+              > a:hover {
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    nav.vertical {
+      display:none;            
+    }
+  }
+}
