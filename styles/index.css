@@ -4,6 +4,7 @@
   }
   body nav#navbarY {
     top: 0;
+    background-color: #aa2bee;
     flex-direction: column;
     position: -webkit-sticky;
     position: sticky;
@@ -14,29 +15,38 @@
     align-items: flex-start;
   }
   body nav#navbarY div#tittleY h1 a {
-    font-size: 3.3vw;
-    color: #fff;
+    font-size: 3.5vw;
+    color: white;
     text-decoration: none;
   }
-  body nav#navbarY div#tittleY h4:first-of-type + h4 {
-    font-size: medium;
-  }
-  body nav#navbarY div#tittleY h4:last-child {
+  body nav#navbarY div#tittleY h4:first-of-type {
+    color: black;
     font-style: italic;
+  }
+  body nav#navbarY div#tittleY h4:first-of-type + h4 {
+    color: black;
+    font-size: medium;
   }
   body nav#navbarY div.container-fluid {
     flex-direction: column;
     align-items: flex-start;
   }
+  body nav#navbarY div.container-fluid > a {
+    color: black;
+    font-size: 1.7vw;
+  }
+  body nav#navbarY div.container-fluid p {
+    color: rgb(255, 255, 255);
+  }
   body nav#navbarY div.container-fluid div.collapse ul.navbar-nav {
     flex-direction: column;
   }
   body nav#navbarY div.container-fluid div.collapse ul.navbar-nav > li > a {
-    color: #ffffff;
+    color: white;
     font-size: 1.7vw;
   }
   body nav#navbarY div.container-fluid div.collapse ul.navbar-nav > li > a:hover {
-    color: #000;
+    color: black;
   }
   body div#content > p {
     font-size: 15px;
@@ -50,17 +60,44 @@
     flex-direction: row;
   }
   body nav#navbarX div#tittleX {
-    margin: 0;
+    padding: 5px;
     flex-direction: row;
   }
-  body nav#navbarX div#tittleX h1 {
-    font-size: 50px;
+  body nav#navbarX div#tittleX h1 a {
+    background-color: #e3aeff;
+    font-size: 5vw;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
   }
   body nav#navbarX div#tittleX h2 {
+    background-color: #6e0ea2;
     font-size: 25px;
+    color: white;
+    padding: 5px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
   body nav#navbarX div#tittleX h4 {
+    background-color: #aa2bee;
+    color: white;
     font-style: italic;
     font-size: 15px;
+    padding: 5px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  body nav#navbarX div.container {
+    background-color: #f2dbff;
+    padding: 5px;
+  }
+  body nav#navbarX div.container > a {
+    color: black;
+  }
+  body nav#navbarX div.container div#navbarColor01 ul li a {
+    color: black;
+    font-size: 2vw;
   }
 }/*# sourceMappingURL=index.css.map */
