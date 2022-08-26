@@ -1,33 +1,49 @@
 @media screen and (min-width: 992px) {
-  body nav.horizontal {
+  body nav#navbarX {
     display: none;
   }
-  body nav.vertical {
+  body nav#navbarY {
     top: 0;
     flex-direction: column;
     position: -webkit-sticky;
     position: sticky;
     height: 100vh;
   }
-  body nav.vertical div#tittle {
+  body nav#navbarY div#tittleY {
     flex-direction: column;
     align-items: flex-start;
   }
-  body nav.vertical div.container-fluid {
+  body nav#navbarY div#tittleY h1 {
+    font-size: 3.5vw;
+    color: #fff;
+  }
+  body nav#navbarY div#tittleY h4:first-of-type + h4 {
+    font-size: medium;
+  }
+  body nav#navbarY div#tittleY h4:last-child {
+    font-style: italic;
+  }
+  body nav#navbarY div.container-fluid {
     flex-direction: column;
+    align-items: flex-start;
   }
-  body nav.vertical div.container-fluid div.collapse ul.navbar-nav {
+  body nav#navbarY div.container-fluid div.collapse ul.navbar-nav {
     flex-direction: column;
+    margin: 5px 0px 5px 0px;
   }
-  body nav.vertical div.container-fluid div.collapse ul.navbar-nav > li {
-    background-color: #437047;
+  body nav#navbarY div.container-fluid div.collapse ul.navbar-nav > li > a {
+    color: #ffffff;
+    font-size: 1.7vw;
   }
-  body nav.vertical div.container-fluid div.collapse ul.navbar-nav > li > a:hover {
+  body nav#navbarY div.container-fluid div.collapse ul.navbar-nav > li > a:hover {
     color: #000;
+  }
+  body div#content > p {
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 991px) {
-  body nav.vertical {
+  body nav#navbarX {
     display: none;
   }
 }/*# sourceMappingURL=index.css.map */
