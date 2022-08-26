@@ -43,7 +43,24 @@
   }
 }
 @media screen and (max-width: 991px) {
-  body nav#navbarX {
+  body nav#navbarY {
     display: none;
+  }
+  body nav#navbarX {
+    flex-direction: row;
+  }
+  body nav#navbarX div#tittleX {
+    margin: 0;
+    flex-direction: row;
+  }
+  body nav#navbarX div#tittleX h1 {
+    font-size: 50px;
+  }
+  body nav#navbarX div#tittleX h2 {
+    font-size: 25px;
+  }
+  body nav#navbarX div#tittleX h4 {
+    font-style: italic;
+    font-size: 15px;
   }
 }/*# sourceMappingURL=index.css.map */

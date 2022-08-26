@@ -60,8 +60,27 @@ body {
   }
 
   @media screen and (max-width: 991px) {
-    nav#navbarX {
+    nav#navbarY{
       display:none;            
+    }
+
+    nav#navbarX{
+      flex-direction: row;
+      div#tittleX {
+        margin: 0;
+        flex-direction: row;
+        h1 {
+          font-size: 50px;
+        }
+        h2 {
+          font-size: 25px;
+        }
+        h4 {
+          font-style: italic;
+          font-size: 15px;
+        }
+      }
+
     }
   }
 }
