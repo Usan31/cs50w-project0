@@ -13,9 +13,10 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  body nav#navbarY div#tittleY h1 {
-    font-size: 3.5vw;
+  body nav#navbarY div#tittleY h1 a {
+    font-size: 3.3vw;
     color: #fff;
+    text-decoration: none;
   }
   body nav#navbarY div#tittleY h4:first-of-type + h4 {
     font-size: medium;
@@ -29,7 +30,6 @@
   }
   body nav#navbarY div.container-fluid div.collapse ul.navbar-nav {
     flex-direction: column;
-    margin: 5px 0px 5px 0px;
   }
   body nav#navbarY div.container-fluid div.collapse ul.navbar-nav > li > a {
     color: #ffffff;
