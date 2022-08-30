@@ -1,9 +1,9 @@
 html body {
+  overflow-x: hidden;
   position: relative;
   display: flex;
 }
 html body div.row div#content {
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -15,50 +15,53 @@ html body div.row div#content footer {
   html body nav#navbarX {
     display: none;
   }
-  html body nav#navbarY {
-    top: 0;
+  html body nav.navbarY {
     background-color: #aa2bee;
     flex-direction: column;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
+    z-index: 1;
+    top: 0;
     height: 100vh;
   }
-  html body nav#navbarY div#tittleY {
+  html body nav.navbarY div#tittleY {
     flex-direction: column;
     align-items: flex-start;
   }
-  html body nav#navbarY div#tittleY h1 a {
+  html body nav.navbarY div#tittleY h1 a {
     font-size: 3.5vw;
     color: white;
     text-decoration: none;
   }
-  html body nav#navbarY div#tittleY h4:first-of-type {
+  html body nav.navbarY div#tittleY h1 a:hover {
+    color: black;
+  }
+  html body nav.navbarY div#tittleY h4:first-of-type {
     color: black;
     font-style: italic;
   }
-  html body nav#navbarY div#tittleY h4:first-of-type + h4 {
+  html body nav.navbarY div#tittleY h4:first-of-type + h4 {
     color: black;
     font-size: medium;
   }
-  html body nav#navbarY div.container-fluid {
+  html body nav.navbarY div.container-fluid {
     flex-direction: column;
     align-items: flex-start;
   }
-  html body nav#navbarY div.container-fluid > a {
+  html body nav.navbarY div.container-fluid > a {
     color: black;
     font-size: 1.7vw;
   }
-  html body nav#navbarY div.container-fluid p {
+  html body nav.navbarY div.container-fluid p {
     color: rgb(255, 255, 255);
   }
-  html body nav#navbarY div.container-fluid div.collapse ul.navbar-nav {
+  html body nav.navbarY div.container-fluid div.collapse ul.navbar-nav {
     flex-direction: column;
   }
-  html body nav#navbarY div.container-fluid div.collapse ul.navbar-nav > li > a {
+  html body nav.navbarY div.container-fluid div.collapse ul.navbar-nav > li > a {
     color: white;
     font-size: 1.7vw;
   }
-  html body nav#navbarY div.container-fluid div.collapse ul.navbar-nav > li > a:hover {
+  html body nav.navbarY div.container-fluid div.collapse ul.navbar-nav > li > a:hover {
     color: black;
   }
   html body div#content > p {
@@ -66,7 +69,7 @@ html body div.row div#content footer {
   }
 }
 @media screen and (max-width: 991px) {
-  html body nav#navbarY {
+  html body nav.navbarY, html body div.navbarY {
     display: none;
   }
   html body nav#navbarX {
