@@ -4,12 +4,21 @@ html body {
   display: flex;
 }
 html body div.row div#content {
+  position: relative;
   display: flex;
   flex-direction: column;
+  padding-bottom: 50px;
+  min-height: 100vh;
 }
-html body div.row div#content footer {
-  position: relative;
+html body div.row footer {
+  text-align: center;
+  background: #6e0ea2;
+  height: 50px;
+  position: absolute;
   bottom: 0;
+}
+html body div.row footer h6 {
+  color: aliceblue;
 }
 @media screen and (min-width: 992px) {
   html body nav#navbarX {
