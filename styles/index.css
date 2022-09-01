@@ -1,128 +1,159 @@
-html body {
-  overflow-x: hidden;
-  position: relative;
-  display: flex;
-}
-html body div.row div#content {
+html body div.container-fluid div.row main {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-bottom: 50px;
   min-height: 100vh;
+  padding-bottom: 50px;
 }
-html body div.row footer {
-  text-align: center;
-  background: #6e0ea2;
-  height: 50px;
+
+html body div.container-fluid {
+  position: relative;
+  display: flex;
+  overflow-x: hidden;
+}
+html body div.container-fluid div.row footer {
   position: absolute;
   bottom: 0;
+  height: 50px;
+  padding-top: 16px;
+  text-align: center;
+  background: #6e0ea2;
 }
-html body div.row footer h6 {
-  color: aliceblue;
+html body div.container-fluid div.row footer h6 {
+  color: white;
 }
+
 @media screen and (min-width: 992px) {
-  html body nav#navbarX {
-    display: none;
-  }
-  html body nav.navbarY {
-    background-color: #aa2bee;
-    flex-direction: column;
+  div.container-fluid div.row nav.navbar {
     position: fixed;
-    z-index: 1;
     top: 0;
-    height: 100vh;
-  }
-  html body nav.navbarY div#tittleY {
+    z-index: 1;
     flex-direction: column;
+    height: 100vh;
+    padding: 20px 20px 0 20px;
+    background: #aa2bee;
+  }
+  div.container-fluid div.row nav.navbar header {
+    flex-direction: column;
+    margin: 0 0 15px 0;
     align-items: flex-start;
   }
-  html body nav.navbarY div#tittleY h1 a {
-    font-size: 3.5vw;
+  div.container-fluid div.row nav.navbar header h1 a {
+    font-size: 3.3vw;
     color: white;
     text-decoration: none;
   }
-  html body nav.navbarY div#tittleY h1 a:hover {
+  div.container-fluid div.row nav.navbar header h1 a:hover {
     color: black;
   }
-  html body nav.navbarY div#tittleY h4:first-of-type {
+  div.container-fluid div.row nav.navbar header h2:first-of-type {
+    font-size: 1.8vw;
     color: black;
     font-style: italic;
   }
-  html body nav.navbarY div#tittleY h4:first-of-type + h4 {
+  div.container-fluid div.row nav.navbar header h2 + h4 {
+    font-size: 1.2vw;
     color: black;
-    font-size: medium;
   }
-  html body nav.navbarY div.container-fluid {
+  div.container-fluid div.row nav.navbar div.container {
+    padding: 0;
     flex-direction: column;
     align-items: flex-start;
   }
-  html body nav.navbarY div.container-fluid > a {
+  div.container-fluid div.row nav.navbar div.container > a {
+    font-size: 1.5vw;
     color: black;
-    font-size: 1.7vw;
   }
-  html body nav.navbarY div.container-fluid p {
-    color: rgb(255, 255, 255);
+  div.container-fluid div.row nav.navbar div.container p {
+    padding: 0 20px 0 20px;
+    font-size: 1vw;
+    color: white;
   }
-  html body nav.navbarY div.container-fluid div.collapse ul.navbar-nav {
+  div.container-fluid div.row nav.navbar div.container div.collapse ul.navbar-nav {
     flex-direction: column;
   }
-  html body nav.navbarY div.container-fluid div.collapse ul.navbar-nav > li > a {
-    color: white;
+  div.container-fluid div.row nav.navbar div.container div.collapse ul.navbar-nav > li > a {
     font-size: 1.7vw;
+    color: white;
   }
-  html body nav.navbarY div.container-fluid div.collapse ul.navbar-nav > li > a:hover {
+  div.container-fluid div.row nav.navbar div.container div.collapse ul.navbar-nav > li > a:hover {
     color: black;
   }
-  html body div#content > p {
-    font-size: 15px;
+  div.container-fluid div.row main > p {
+    font-size: 1.5vw;
+  }
+  div.container-fluid div.row footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 0 40px 0 40px;
   }
 }
-@media screen and (max-width: 991px) {
-  html body nav.navbarY, html body div.navbarY {
-    display: none;
-  }
-  html body nav#navbarX {
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  body div.container-fluid div.row nav.navbar {
     flex-direction: row;
   }
-  html body nav#navbarX div#tittleX {
-    padding: 5px;
+  body div.container-fluid div.row nav.navbar header {
+    display: flex;
+    width: 100vw;
+    padding: 15px;
     flex-direction: row;
+    align-items: center;
+    gap: 10px;
   }
-  html body nav#navbarX div#tittleX h1 a {
-    background-color: #e3aeff;
-    font-size: 5vw;
+  body div.container-fluid div.row nav.navbar header h1 {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  body div.container-fluid div.row nav.navbar header h1 a {
+    padding: 0 15px 0 15px;
+    font-size: 6vw;
     color: white;
     text-decoration: none;
-    padding: 5px;
+    background: #e3aeff;
   }
-  html body nav#navbarX div#tittleX h2 {
-    background-color: #6e0ea2;
+  body div.container-fluid div.row nav.navbar header h2 {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    width: 35vw;
+    padding: 5px;
     font-size: 2.5vw;
     color: white;
-    padding: 5px;
+    background: #6e0ea2;
+  }
+  body div.container-fluid div.row nav.navbar header h4 {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-  }
-  html body nav#navbarX div#tittleX h4 {
-    background-color: #aa2bee;
+    padding: 5px;
+    font-size: 2vw;
     color: white;
     font-style: italic;
-    font-size: 2vw;
-    padding: 5px;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
+    background: #aa2bee;
   }
-  html body nav#navbarX div.container {
-    background-color: #f2dbff;
+  body div.container-fluid div.row nav.navbar div.container {
     padding: 5px;
+    background: #f2dbff;
   }
-  html body nav#navbarX div.container > a {
+  body div.container-fluid div.row nav.navbar div.container > a {
     color: black;
   }
-  html body nav#navbarX div.container div#navbarColor01 ul li a {
-    color: black;
+  body div.container-fluid div.row nav.navbar div.container p {
+    display: none;
+  }
+  body div.container-fluid div.row nav.navbar div.container div#navbarColor01 ul li a {
     font-size: 2vw;
+    color: black;
   }
 }/*# sourceMappingURL=index.css.map */

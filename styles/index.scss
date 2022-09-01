@@ -2,146 +2,187 @@ $purple-dark: #6e0ea2;
 $purple: #aa2bee;
 $purple-light: #e3aeff;
 $purple-MORE-light: #f2dbff;
+$white: white; // relleno wacho, que miras?
+$black: black;
 
+@mixin theme($color){
+    background: $color;
+}
+
+// herencia forzada :)
+%main-prop { 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
 
 html {
     body {
-        overflow-x: hidden;
-        position: relative;
-        display: flex;
-        div.row {
-            div#content {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                padding-bottom: 50px;
-                min-height: 100vh;
-            }
-            footer {
-                text-align: center;
-                background: #6e0ea2;
-                height: 50px;
-                position: absolute;
-                bottom: 0;
-                h6 {
-                    color:aliceblue;
+        div.container-fluid {
+            position: relative;
+            display: flex;
+            overflow-x: hidden;
+            div.row {
+                main {
+                    @extend %main-prop 
+                }
+                footer {
+                    position: absolute;
+                    bottom: 0;
+                    height: 50px;
+                    padding-top: 16px;
+                    text-align: center;
+                    background: $purple-dark;
+                    h6 {
+                        color:$white;
+                    }
                 }
             }
         }
-        @media screen and (min-width: 992px) {
-            nav#navbarX {
-                display:none;            
-            }
-            nav.navbarY {
-                background-color: $purple;
-                flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    div.container-fluid {
+        div.row {
+            nav.navbar {
                 position: fixed;
-                z-index: 1;
                 top: 0;
+                z-index: 1;
+                flex-direction: column;
                 height: 100vh;
-                div#tittleY {
+                padding: 20px 20px 0 20px;
+                header {
                     flex-direction: column;
+                    margin: 0 0 15px 0 ;
                     align-items: flex-start;
                     h1 {
                         a {
-                            font-size: 3.5vw;
-                            color: white;
+                            font-size: 3.3vw;
+                            color: $white;
                             text-decoration: none;
                         }
-                        a:hover {color: black;}
+                        a:hover {color: $black;}
                     }
-                    h4:first-of-type {
-                        color: black;
+                    h2:first-of-type {
+                        font-size: 1.8vw;
+                        color: $black;
                         font-style: italic;
                     }
-                    h4:first-of-type + h4 {
-                        color: black;
-                        font-size: medium;
+                    h2 + h4 {
+                        font-size: 1.2vw;
+                        color: $black;
                     }
                 }
-                div.container-fluid {
+                div.container {
+                    padding: 0;
                     flex-direction: column;
                     align-items: flex-start;
                     > a {
-                        color: black;
-                        font-size: 1.7vw;
+                        font-size: 1.5vw;
+                        color: $black;
                     }
                     p {
-                        color: rgb(255, 255, 255);
+                        padding: 0 20px 0 20px;
+                        font-size: 1vw;
+                        color: $white;
                     }
                     div.collapse {
                         ul.navbar-nav {
                             flex-direction: column;
                             > li {
                                 > a {
-                                    color: white;
                                     font-size: 1.7vw;
+                                    color: $white;
                                 }
                                 > a:hover {
-                                    color: black;
+                                    color: $black;
                                 }
                             }
                         }
                     }
                 }
+                @include theme($color: $purple)
             }
-            div#content {
+            main {
                 > p {
-                    font-size: 15px;
+                    font-size: 1.5vw;
                 }
+            }
+            footer {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                width: max-content;
+                padding: 0 40px 0 40px;
             }
         }
-        @media screen and (max-width: 991px) {
-            nav.navbarY, div.navbarY{
-                display:none;            
-            }
-            nav#navbarX{
-                flex-direction: row;
-                div#tittleX {
-                    padding: 5px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 991px) {
+    body {
+        div.container-fluid {
+            div.row {
+                nav.navbar{
                     flex-direction: row;
-                    h1 {
-                        a {
-                            background-color: $purple-light;
-                            font-size: 5vw;
-                            color: white;
-                            text-decoration: none;
-                            padding: 5px;
-                        }
-                    }
-                    h2 {
-                        background-color: $purple-dark;
-                        font-size: 2.5vw;
-                        color: white;
-                        padding: 5px;
-                        width: max-content;
-                    }
-                      h4 {
-                        background-color: $purple;
-                        color: white;
-                        font-style: italic;
-                        font-size: 2vw;
-                        padding: 5px;
-                        width: max-content;
-                    }
-                }
-                div.container {
-                    background-color: $purple-MORE-light;
-                    padding: 5px;
-                    > a {
-                        color: black;
-                    }
-                    div#navbarColor01 {
-                        ul {
-                            li {
-                                a {
-                                  color: black;
-                                  font-size: 2vw;
-                                } 
+                    header {
+                        display: flex;
+                        width: 100vw;
+                        padding: 15px;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 10px;
+                        h1 {
+                            width: max-content;
+                            height: max-content;
+                            a {
+                                padding: 0 15px 0 15px;
+                                font-size: 6vw;
+                                color: $white;
+                                text-decoration: none;
+                                @include theme($color: $purple-light)
                             }
                         }
+                        h2 {
+                            height: max-content;
+                            width: 35vw;
+                            padding: 5px;
+                            font-size: 2.5vw;
+                            color: $white;
+                            @include theme($color: $purple-dark)
+                        }
+                        h4 {
+                            height: max-content;
+                            width: max-content;
+                            padding: 5px;
+                            font-size: 2vw;
+                            color: $white;
+                            font-style: italic;
+                            @include theme($color: $purple)
+                        }
                     }
-                }
+                    div.container {
+                        padding: 5px;
+                        > a {
+                            color: $black;
+                        }
+                        p { display: none;}
+                        div#navbarColor01 {
+                            ul {
+                                li {
+                                    a {
+                                    font-size: 2vw;
+                                    color: $black;
+                                    } 
+                                }
+                            }
+                        }
+                        @include theme($color: $purple-MORE-light)
+                    }
+                }            
             }
         }
     }
