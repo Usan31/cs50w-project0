@@ -1,30 +1,31 @@
-html body {
+html body div.container-fluid {
   overflow-x: hidden;
   position: relative;
   display: flex;
 }
-html body div.row div#content {
+html body div.container-fluid div.row main {
   position: relative;
   display: flex;
   flex-direction: column;
   padding-bottom: 50px;
   min-height: 100vh;
 }
-html body div.row footer {
+html body div.container-fluid div.row footer {
   text-align: center;
   background: #6e0ea2;
   height: 50px;
   position: absolute;
   bottom: 0;
 }
-html body div.row footer h6 {
+html body div.container-fluid div.row footer h6 {
   color: aliceblue;
 }
+
 @media screen and (min-width: 992px) {
-  html body nav#navbarX {
+  div.container-fluid div.row nav#navbarX {
     display: none;
   }
-  html body nav.navbarY {
+  div.container-fluid div.row nav.navbarY {
     background-color: #aa2bee;
     flex-direction: column;
     position: fixed;
@@ -32,70 +33,119 @@ html body div.row footer h6 {
     top: 0;
     height: 100vh;
   }
-  html body nav.navbarY div#tittleY {
+  div.container-fluid div.row nav.navbarY div#tittleY {
     flex-direction: column;
     align-items: flex-start;
   }
-  html body nav.navbarY div#tittleY h1 a {
+  div.container-fluid div.row nav.navbarY div#tittleY h1 a {
     font-size: 3.5vw;
     color: white;
     text-decoration: none;
   }
-  html body nav.navbarY div#tittleY h1 a:hover {
+  div.container-fluid div.row nav.navbarY div#tittleY h1 a:hover {
     color: black;
   }
-  html body nav.navbarY div#tittleY h4:first-of-type {
+  div.container-fluid div.row nav.navbarY div#tittleY h4:first-of-type {
     color: black;
     font-style: italic;
   }
-  html body nav.navbarY div#tittleY h4:first-of-type + h4 {
+  div.container-fluid div.row nav.navbarY div#tittleY h4:first-of-type + h4 {
     color: black;
     font-size: medium;
   }
-  html body nav.navbarY div.container-fluid {
+  div.container-fluid div.row nav.navbarY div.container-fluid {
     flex-direction: column;
     align-items: flex-start;
   }
-  html body nav.navbarY div.container-fluid > a {
+  div.container-fluid div.row nav.navbarY div.container-fluid > a {
     color: black;
     font-size: 1.7vw;
   }
-  html body nav.navbarY div.container-fluid p {
+  div.container-fluid div.row nav.navbarY div.container-fluid p {
     color: rgb(255, 255, 255);
   }
-  html body nav.navbarY div.container-fluid div.collapse ul.navbar-nav {
+  div.container-fluid div.row nav.navbarY div.container-fluid div.collapse ul.navbar-nav {
     flex-direction: column;
   }
-  html body nav.navbarY div.container-fluid div.collapse ul.navbar-nav > li > a {
+  div.container-fluid div.row nav.navbarY div.container-fluid div.collapse ul.navbar-nav > li > a {
     color: white;
     font-size: 1.7vw;
   }
-  html body nav.navbarY div.container-fluid div.collapse ul.navbar-nav > li > a:hover {
+  div.container-fluid div.row nav.navbarY div.container-fluid div.collapse ul.navbar-nav > li > a:hover {
     color: black;
   }
-  html body div#content > p {
+  div.container-fluid div.row nav.navbar {
+    background-color: #aa2bee;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    height: 100vh;
+  }
+  div.container-fluid div.row nav.navbar header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  div.container-fluid div.row nav.navbar header h1 a {
+    font-size: 3.5vw;
+    color: white;
+    text-decoration: none;
+  }
+  div.container-fluid div.row nav.navbar header h1 a:hover {
+    color: black;
+  }
+  div.container-fluid div.row nav.navbar header h4:first-of-type {
+    color: black;
+    font-style: italic;
+  }
+  div.container-fluid div.row nav.navbar header h4:first-of-type + h4 {
+    color: black;
+    font-size: medium;
+  }
+  div.container-fluid div.row nav.navbar div.container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  div.container-fluid div.row nav.navbar div.container > a {
+    color: black;
+    font-size: 1.7vw;
+  }
+  div.container-fluid div.row nav.navbar div.container p {
+    color: rgb(255, 255, 255);
+  }
+  div.container-fluid div.row nav.navbar div.container div.collapse ul.navbar-nav {
+    flex-direction: column;
+  }
+  div.container-fluid div.row nav.navbar div.container div.collapse ul.navbar-nav > li > a {
+    color: white;
+    font-size: 1.7vw;
+  }
+  div.container-fluid div.row nav.navbar div.container div.collapse ul.navbar-nav > li > a:hover {
+    color: black;
+  }
+  div.container-fluid div.row main > p {
     font-size: 15px;
   }
 }
 @media screen and (max-width: 991px) {
-  html body nav.navbarY, html body div.navbarY {
+  body div.container-fluid div.row nav.navbarY, body div.container-fluid div.row div.navbarY {
     display: none;
   }
-  html body nav#navbarX {
+  body div.container-fluid div.row nav#navbarX {
     flex-direction: row;
   }
-  html body nav#navbarX div#tittleX {
+  body div.container-fluid div.row nav#navbarX div#tittleX {
     padding: 5px;
     flex-direction: row;
   }
-  html body nav#navbarX div#tittleX h1 a {
+  body div.container-fluid div.row nav#navbarX div#tittleX h1 a {
     background-color: #e3aeff;
     font-size: 5vw;
     color: white;
     text-decoration: none;
     padding: 5px;
   }
-  html body nav#navbarX div#tittleX h2 {
+  body div.container-fluid div.row nav#navbarX div#tittleX h2 {
     background-color: #6e0ea2;
     font-size: 2.5vw;
     color: white;
@@ -104,7 +154,7 @@ html body div.row footer h6 {
     width: -moz-max-content;
     width: max-content;
   }
-  html body nav#navbarX div#tittleX h4 {
+  body div.container-fluid div.row nav#navbarX div#tittleX h4 {
     background-color: #aa2bee;
     color: white;
     font-style: italic;
@@ -114,14 +164,77 @@ html body div.row footer h6 {
     width: -moz-max-content;
     width: max-content;
   }
-  html body nav#navbarX div.container {
+  body div.container-fluid div.row nav#navbarX div.container {
     background-color: #f2dbff;
     padding: 5px;
   }
-  html body nav#navbarX div.container > a {
+  body div.container-fluid div.row nav#navbarX div.container > a {
     color: black;
   }
-  html body nav#navbarX div.container div#navbarColor01 ul li a {
+  body div.container-fluid div.row nav#navbarX div.container div#navbarColor01 ul li a {
+    color: black;
+    font-size: 2vw;
+  }
+  body div.container-fluid div.row nav.navbar {
+    flex-direction: row;
+  }
+  body div.container-fluid div.row nav.navbar header {
+    padding: 15px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  body div.container-fluid div.row nav.navbar header h1 {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  body div.container-fluid div.row nav.navbar header h1 a {
+    background-color: #e3aeff;
+    font-size: 6vw;
+    color: white;
+    text-decoration: none;
+    padding: 0 15px 0 15px;
+  }
+  body div.container-fluid div.row nav.navbar header h2 {
+    background-color: #6e0ea2;
+    font-size: 2.5vw;
+    color: white;
+    padding: 5px;
+    width: 35vw;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  body div.container-fluid div.row nav.navbar header h4 {
+    background-color: #aa2bee;
+    color: white;
+    font-style: italic;
+    font-size: 2vw;
+    padding: 5px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  body div.container-fluid div.row nav.navbar div.container {
+    background-color: #f2dbff;
+    padding: 5px;
+  }
+  body div.container-fluid div.row nav.navbar div.container > a {
+    color: black;
+  }
+  body div.container-fluid div.row nav.navbar div.container p {
+    display: none;
+  }
+  body div.container-fluid div.row nav.navbar div.container div#navbarColor01 ul li a {
     color: black;
     font-size: 2vw;
   }

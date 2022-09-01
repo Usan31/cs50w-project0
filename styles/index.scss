@@ -6,29 +6,36 @@ $purple-MORE-light: #f2dbff;
 
 html {
     body {
-        overflow-x: hidden;
-        position: relative;
-        display: flex;
-        div.row {
-            div#content {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                padding-bottom: 50px;
-                min-height: 100vh;
-            }
-            footer {
-                text-align: center;
-                background: #6e0ea2;
-                height: 50px;
-                position: absolute;
-                bottom: 0;
-                h6 {
-                    color:aliceblue;
+        div.container-fluid {
+            overflow-x: hidden;
+            position: relative;
+            display: flex;
+            div.row {
+                main {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    padding-bottom: 50px;
+                    min-height: 100vh;
+                }
+                footer {
+                    text-align: center;
+                    background: #6e0ea2;
+                    height: 50px;
+                    position: absolute;
+                    bottom: 0;
+                    h6 {
+                        color:aliceblue;
+                    }
                 }
             }
         }
-        @media screen and (min-width: 992px) {
+    }
+}
+
+@media screen and (min-width: 992px) {
+    div.container-fluid {
+        div.row {
             nav#navbarX {
                 display:none;            
             }
@@ -85,13 +92,72 @@ html {
                     }
                 }
             }
-            div#content {
+            nav.navbar {
+                background-color: $purple;
+                flex-direction: column;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                height: 100vh;
+                header {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    h1 {
+                        a {
+                            font-size: 3.5vw;
+                            color: white;
+                            text-decoration: none;
+                        }
+                        a:hover {color: black;}
+                    }
+                    h4:first-of-type {
+                        color: black;
+                        font-style: italic;
+                    }
+                    h4:first-of-type + h4 {
+                        color: black;
+                        font-size: medium;
+                    }
+                }
+                div.container {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    > a {
+                        color: black;
+                        font-size: 1.7vw;
+                    }
+                    p {
+                        color: rgb(255, 255, 255);
+                    }
+                    div.collapse {
+                        ul.navbar-nav {
+                            flex-direction: column;
+                            > li {
+                                > a {
+                                    color: white;
+                                    font-size: 1.7vw;
+                                }
+                                > a:hover {
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            main {
                 > p {
                     font-size: 15px;
                 }
             }
         }
-        @media screen and (max-width: 991px) {
+    }
+}
+
+@media screen and (max-width: 991px) {
+body {
+    div.container-fluid {
+        div.row {
             nav.navbarY, div.navbarY{
                 display:none;            
             }
@@ -116,7 +182,7 @@ html {
                         padding: 5px;
                         width: max-content;
                     }
-                      h4 {
+                    h4 {
                         background-color: $purple;
                         color: white;
                         font-style: italic;
@@ -135,14 +201,72 @@ html {
                         ul {
                             li {
                                 a {
-                                  color: black;
-                                  font-size: 2vw;
+                                color: black;
+                                font-size: 2vw;
                                 } 
                             }
                         }
                     }
                 }
             }
+            nav.navbar{
+                flex-direction: row;
+                header {
+                    padding: 15px;
+                    width: 100vw;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 10px;
+                    h1 {
+                        width: max-content;
+                        height: max-content;
+                        a {
+                            background-color: $purple-light;
+                            font-size: 6vw;
+                            color: white;
+                            text-decoration: none;
+                            padding: 0 15px 0 15px;
+                        }
+                    }
+                    h2 {
+                        background-color: $purple-dark;
+                        font-size: 2.5vw;
+                        color: white;
+                        padding: 5px;
+                        width: 35vw;
+                        height: max-content;
+                    }
+                    h4 {
+                        background-color: $purple;
+                        color: white;
+                        font-style: italic;
+                        font-size: 2vw;
+                        padding: 5px;
+                        width: max-content;
+                        height: max-content;
+                    }
+                }
+                div.container {
+                    background-color: $purple-MORE-light;
+                    padding: 5px;
+                    > a {
+                        color: black;
+                    }
+                    p { display: none;}
+                    div#navbarColor01 {
+                        ul {
+                            li {
+                                a {
+                                color: black;
+                                font-size: 2vw;
+                                } 
+                            }
+                        }
+                    }
+                }
+            }            
         }
     }
+}
 }
