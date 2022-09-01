@@ -1,14 +1,15 @@
-html body div.container-fluid {
-  position: relative;
-  display: flex;
-  overflow-x: hidden;
-}
 html body div.container-fluid div.row main {
   position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   padding-bottom: 50px;
+}
+
+html body div.container-fluid {
+  position: relative;
+  display: flex;
+  overflow-x: hidden;
 }
 html body div.container-fluid div.row footer {
   position: absolute;
@@ -30,7 +31,7 @@ html body div.container-fluid div.row footer h6 {
     flex-direction: column;
     height: 100vh;
     padding: 20px 20px 0 20px;
-    background-color: #aa2bee;
+    background: #aa2bee;
   }
   div.container-fluid div.row nav.navbar header {
     flex-direction: column;
@@ -116,7 +117,7 @@ html body div.container-fluid div.row footer h6 {
     font-size: 6vw;
     color: white;
     text-decoration: none;
-    background-color: #e3aeff;
+    background: #e3aeff;
   }
   body div.container-fluid div.row nav.navbar header h2 {
     height: -webkit-max-content;
@@ -126,7 +127,7 @@ html body div.container-fluid div.row footer h6 {
     padding: 5px;
     font-size: 2.5vw;
     color: white;
-    background-color: #6e0ea2;
+    background: #6e0ea2;
   }
   body div.container-fluid div.row nav.navbar header h4 {
     height: -webkit-max-content;
@@ -139,11 +140,11 @@ html body div.container-fluid div.row footer h6 {
     font-size: 2vw;
     color: white;
     font-style: italic;
-    background-color: #aa2bee;
+    background: #aa2bee;
   }
   body div.container-fluid div.row nav.navbar div.container {
     padding: 5px;
-    background-color: #f2dbff;
+    background: #f2dbff;
   }
   body div.container-fluid div.row nav.navbar div.container > a {
     color: black;

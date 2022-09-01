@@ -5,6 +5,19 @@ $purple-MORE-light: #f2dbff;
 $white: white; // relleno wacho, que miras?
 $black: black;
 
+@mixin theme($color){
+    background: $color;
+}
+
+// herencia forzada :)
+%main-prop { 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
 html {
     body {
         div.container-fluid {
@@ -13,11 +26,7 @@ html {
             overflow-x: hidden;
             div.row {
                 main {
-                    position: relative;
-                    display: flex;
-                    flex-direction: column;
-                    min-height: 100vh;
-                    padding-bottom: 50px;
+                    @extend %main-prop 
                 }
                 footer {
                     position: absolute;
@@ -25,7 +34,7 @@ html {
                     height: 50px;
                     padding-top: 16px;
                     text-align: center;
-                    background: #6e0ea2;
+                    background: $purple-dark;
                     h6 {
                         color:$white;
                     }
@@ -45,7 +54,6 @@ html {
                 flex-direction: column;
                 height: 100vh;
                 padding: 20px 20px 0 20px;
-                background-color: $purple;
                 header {
                     flex-direction: column;
                     margin: 0 0 15px 0 ;
@@ -96,6 +104,7 @@ html {
                         }
                     }
                 }
+                @include theme($color: $purple)
             }
             main {
                 > p {
@@ -134,7 +143,7 @@ html {
                                 font-size: 6vw;
                                 color: $white;
                                 text-decoration: none;
-                                background-color: $purple-light;
+                                @include theme($color: $purple-light)
                             }
                         }
                         h2 {
@@ -143,7 +152,7 @@ html {
                             padding: 5px;
                             font-size: 2.5vw;
                             color: $white;
-                            background-color: $purple-dark;
+                            @include theme($color: $purple-dark)
                         }
                         h4 {
                             height: max-content;
@@ -152,12 +161,11 @@ html {
                             font-size: 2vw;
                             color: $white;
                             font-style: italic;
-                            background-color: $purple;
+                            @include theme($color: $purple)
                         }
                     }
                     div.container {
                         padding: 5px;
-                        background-color: $purple-MORE-light;
                         > a {
                             color: $black;
                         }
@@ -172,6 +180,7 @@ html {
                                 }
                             }
                         }
+                        @include theme($color: $purple-MORE-light)
                     }
                 }            
             }
