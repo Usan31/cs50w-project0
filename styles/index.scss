@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Signika+Negative:wght@500&display=swap');
+
 $purple-dark: #6e0ea2;
 $purple: #aa2bee;
 $purple-light: #e3aeff;
@@ -21,6 +23,7 @@ $black: black;
 
 html {
     body {
+        font-family: 'Roboto Mono', monospace;
         div.container-fluid {
             position: relative;
             display: flex;
@@ -62,8 +65,25 @@ html {
                     }
                 }
                 main {
+                    font-family: 'Roboto Mono', monospace;
                     margin-bottom: 10px;
+                    color: $black;
                     p {color: $black;}
+                    h3 {
+                        color: $black;
+                        font-size: 5vw;
+                    }
+                    article {
+                        h2 {
+                            color: $black;
+                            font-size: 5vw;
+                        }
+                        ul {
+                            li {
+                                font-size: 3vw;
+                            }
+                        }
+                    }
                     @extend %main-prop 
                 }
                 footer {
@@ -138,9 +158,13 @@ html {
                 @include theme($color: $purple)
             }
             main {
-                > p {
-                    font-size: 1.5vw;
+                p:first-child {
+                    font-size: 3vw;
                 }
+                > p {
+                    font-size: 2vw;
+                }
+                article {display: none;}
             }
             footer {
                 position: fixed;
@@ -216,6 +240,10 @@ html {
                     p:first-of-type {
                         font-size: 5vw;
                     }
+                    > p {
+                        font-size: 3.5vw;
+                    }
+                    table {display: none;}
                 }        
             }
         }
@@ -248,6 +276,15 @@ html {
                         > a {font-size: 5vw;}
                         p { display: none ;}
                     }
+                }
+                main {
+                    p:first-child {
+                        font-size: 5vw;
+                    }
+                    > p {
+                        font-size: 4vw;
+                    }
+                    table {display: none;}
                 }
             }
         }

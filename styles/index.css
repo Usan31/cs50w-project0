@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Signika+Negative:wght@500&display=swap");
 html body div.container-fluid div.row main {
   position: relative;
   display: flex;
@@ -6,6 +7,9 @@ html body div.container-fluid div.row main {
   padding-bottom: 50px;
 }
 
+html body {
+  font-family: "Roboto Mono", monospace;
+}
 html body div.container-fluid {
   position: relative;
   display: flex;
@@ -45,10 +49,23 @@ html body div.container-fluid div.row nav div.container div#navbarColor01 ul li:
   background-color: white;
 }
 html body div.container-fluid div.row main {
+  font-family: "Roboto Mono", monospace;
   margin-bottom: 10px;
+  color: black;
 }
 html body div.container-fluid div.row main p {
   color: black;
+}
+html body div.container-fluid div.row main h3 {
+  color: black;
+  font-size: 5vw;
+}
+html body div.container-fluid div.row main article h2 {
+  color: black;
+  font-size: 5vw;
+}
+html body div.container-fluid div.row main article ul li {
+  font-size: 3vw;
 }
 html body div.container-fluid div.row footer {
   position: absolute;
@@ -109,8 +126,14 @@ html body div.container-fluid div.row footer h6 {
   div.container-fluid div.row nav.navbar div.container div#navbarColor01 ul.navbar-nav > li > a {
     font-size: 1.7vw;
   }
+  div.container-fluid div.row main p:first-child {
+    font-size: 3vw;
+  }
   div.container-fluid div.row main > p {
-    font-size: 1.5vw;
+    font-size: 2vw;
+  }
+  div.container-fluid div.row main article {
+    display: none;
   }
   div.container-fluid div.row footer {
     position: fixed;
@@ -181,6 +204,12 @@ html body div.container-fluid div.row footer h6 {
   body div.container-fluid div.row main p:first-of-type {
     font-size: 5vw;
   }
+  body div.container-fluid div.row main > p {
+    font-size: 3.5vw;
+  }
+  body div.container-fluid div.row main table {
+    display: none;
+  }
 }
 @media screen and (max-width: 575px) {
   body div.container-fluid div.row nav {
@@ -208,6 +237,15 @@ html body div.container-fluid div.row footer h6 {
     font-size: 5vw;
   }
   body div.container-fluid div.row nav div.container p {
+    display: none;
+  }
+  body div.container-fluid div.row main p:first-child {
+    font-size: 5vw;
+  }
+  body div.container-fluid div.row main > p {
+    font-size: 4vw;
+  }
+  body div.container-fluid div.row main table {
     display: none;
   }
 }/*# sourceMappingURL=index.css.map */
