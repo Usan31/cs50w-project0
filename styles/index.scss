@@ -2,6 +2,7 @@ $purple-dark: #6e0ea2;
 $purple: #aa2bee;
 $purple-light: #e3aeff;
 $purple-MORE-light: #f2dbff;
+
 $white: white; // relleno wacho, que miras?
 $black: black;
 
@@ -25,7 +26,44 @@ html {
             display: flex;
             overflow-x: hidden;
             div.row {
+                nav {
+                    header {
+                        h1 {
+                            a {color: $white;}
+                            a:hover {color: $black;}
+                        }
+                    }
+                    div.container {
+                        button {
+                            background: $purple-light;
+                        }
+                        a {color: $black}
+                        a:hover {color: $white;}
+                        div#navbarColor01 {
+                            padding-left: 10px;
+                            background-color: $purple-light;
+                            ul {
+                                li {
+                                    a {color:$black}
+                                    a:hover {
+                                        color: $purple-dark;
+                                    }
+                                }
+                                li + li{
+                                    padding-left: 10px;
+                                    background-color: $purple-MORE-light;
+                                }
+                                li:last-child {
+                                    padding-left: 20px;
+                                    background-color: $white;
+                                }
+                            }                    
+                        }
+                    }
+                }
                 main {
+                    margin-bottom: 10px;
+                    p {color: $black;}
                     @extend %main-prop 
                 }
                 footer {
@@ -61,10 +99,8 @@ html {
                     h1 {
                         a {
                             font-size: 3.3vw;
-                            color: $white;
                             text-decoration: none;
                         }
-                        a:hover {color: $black;}
                     }
                     h2:first-of-type {
                         font-size: 1.8vw;
@@ -82,23 +118,18 @@ html {
                     align-items: flex-start;
                     > a {
                         font-size: 1.5vw;
-                        color: $black;
                     }
                     p {
                         padding: 0 20px 0 20px;
                         font-size: 1vw;
                         color: $white;
                     }
-                    div.collapse {
+                    div#navbarColor01 {
                         ul.navbar-nav {
                             flex-direction: column;
                             > li {
                                 > a {
                                     font-size: 1.7vw;
-                                    color: $white;
-                                }
-                                > a:hover {
-                                    color: $black;
                                 }
                             }
                         }
@@ -134,55 +165,90 @@ html {
                         padding: 15px;
                         flex-direction: row;
                         align-items: center;
-                        gap: 10px;
+                        justify-content: space-around;
+                        gap: 3vw;
                         h1 {
-                            width: max-content;
-                            height: max-content;
+                            flex-grow: 4;
                             a {
                                 padding: 0 15px 0 15px;
                                 font-size: 6vw;
-                                color: $white;
                                 text-decoration: none;
-                                @include theme($color: $purple-light)
+                                @include theme($color: $purple-dark)
                             }
                         }
                         h2 {
                             height: max-content;
-                            width: 35vw;
+                            width: 18vw;
                             padding: 5px;
-                            font-size: 2.5vw;
+                            flex-grow: 3;
+                            font-size: 3vw;
                             color: $white;
-                            @include theme($color: $purple-dark)
+                            @include theme($color: $purple)
                         }
                         h4 {
                             height: max-content;
-                            width: max-content;
+                            width: 10vw;
                             padding: 5px;
-                            font-size: 2vw;
+                            flex-grow: 2;
+                            font-size: 2.5vw;
                             color: $white;
                             font-style: italic;
-                            @include theme($color: $purple)
+                            @include theme($color: $purple-light)
                         }
                     }
                     div.container {
                         padding: 5px;
-                        > a {
-                            color: $black;
-                        }
+                        background-color: #aa2bee;
                         p { display: none;}
                         div#navbarColor01 {
                             ul {
                                 li {
                                     a {
                                     font-size: 2vw;
-                                    color: $black;
                                     } 
                                 }
                             }
                         }
-                        @include theme($color: $purple-MORE-light)
+                        @include theme($color: $purple)
                     }
-                }            
+                }    
+                main {
+                    p:first-of-type {
+                        font-size: 5vw;
+                    }
+                }        
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    body {
+        div.container-fluid {
+            div.row {
+                nav {
+                    padding-top: 0;
+                    header {
+                        h1 {
+                            width: 100vw;
+                            padding: 10px 0 10px 0;
+                            margin: 0;
+                            text-align: center;
+                            background-color: $purple-dark;
+                            a {
+                                font-size: 8vw;
+                                text-decoration: none;
+                            }
+                        }
+                        h2, h4 {display: none;}
+                    }
+                    div.container {
+                        background-color: $purple;
+                        padding: 0 0 0 10px;
+
+                        p { display: none ;}
+                    }
+                }
             }
         }
     }
