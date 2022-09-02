@@ -194,7 +194,7 @@ html body div.container-fluid div.row footer h6 {
     background-color: #6e0ea2;
   }
   body div.container-fluid div.row nav header h1 a {
-    font-size: 8vw;
+    font-size: 10vw;
     text-decoration: none;
   }
   body div.container-fluid div.row nav header h2, body div.container-fluid div.row nav header h4 {
@@ -203,6 +203,9 @@ html body div.container-fluid div.row footer h6 {
   body div.container-fluid div.row nav div.container {
     background-color: #aa2bee;
     padding: 0 0 0 10px;
+  }
+  body div.container-fluid div.row nav div.container > a {
+    font-size: 5vw;
   }
   body div.container-fluid div.row nav div.container p {
     display: none;

@@ -236,7 +236,7 @@ html {
                             text-align: center;
                             background-color: $purple-dark;
                             a {
-                                font-size: 8vw;
+                                font-size: 10vw;
                                 text-decoration: none;
                             }
                         }
@@ -245,7 +245,7 @@ html {
                     div.container {
                         background-color: $purple;
                         padding: 0 0 0 10px;
-
+                        > a {font-size: 5vw;}
                         p { display: none ;}
                     }
                 }
