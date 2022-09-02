@@ -4,7 +4,6 @@ $purple-dark: #6e0ea2;
 $purple: #aa2bee;
 $purple-light: #e3aeff;
 $purple-MORE-light: #f2dbff;
-
 $white: white; // relleno wacho, que miras?
 $black: black;
 
@@ -36,13 +35,13 @@ html {
                             a:hover {color: $black;}
                         }
                     }
-                    div.container {
+                    .container-fluid {
                         button {
                             background: $purple-light;
                         }
                         a {color: $black}
                         a:hover {color: $white;}
-                        div#navbarColor01 {
+                        #navbarColor01 {
                             padding-left: 10px;
                             background-color: $purple-light;
                             ul {
@@ -132,7 +131,7 @@ html {
                         color: $black;
                     }
                 }
-                div.container {
+                .container-fluid {
                     padding: 0;
                     flex-direction: column;
                     align-items: flex-start;
@@ -144,7 +143,7 @@ html {
                         font-size: 1vw;
                         color: $white;
                     }
-                    div#navbarColor01 {
+                    #navbarColor01 {
                         ul.navbar-nav {
                             flex-direction: column;
                             > li {
@@ -220,11 +219,11 @@ html {
                             @include theme($color: $purple-light)
                         }
                     }
-                    div.container {
+                    .container-fluid {
                         padding: 5px;
                         background-color: #aa2bee;
                         p { display: none;}
-                        div#navbarColor01 {
+                        #navbarColor01 {
                             ul {
                                 li {
                                     a {
@@ -270,7 +269,7 @@ html {
                         }
                         h2, h4 {display: none;}
                     }
-                    div.container {
+                    .container-fluid {
                         background-color: $purple;
                         padding: 0 0 0 10px;
                         > a {font-size: 5vw;}
